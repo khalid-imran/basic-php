@@ -11,13 +11,37 @@
     <h1>Recommended Books</h1>
     <?php
         $books = [
-                'Book 1', 'Book 2', 'Book 3', 'Book 4', 'Book 5', 'Book 6', 'Book 7',
-        ];
+            [
+                "name" => "PHP",
+                "author" => "New name",
+                "download_url" => "https://google.com",
+                "releaseYear" => 2010,
+            ],
+            [
+                "name" => "Javascript",
+                "author" => "New name",
+                "download_url" => "https://google.com",
+                "releaseYear" => 2012,
+            ],
+            [
+                "name" => "Python",
+                "author" => "New name",
+                "download_url" => "https://google.com",
+                "releaseYear" => 2016,
+            ],
+        ]
     ?>
 
     <?php foreach ($books as $book): ?>
         <ul>
-            <li><?= $book?></li>
+            <li>
+                <a href="<?= $book['download_url']?>">
+                    <?= $book['name']?>
+                </a>
+                <span>
+                    <?= $book['releaseYear']?>
+                </span>
+            </li>
         </ul>
     <?php endforeach ?>;
 
