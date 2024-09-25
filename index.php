@@ -29,10 +29,21 @@
                 "download_url" => "https://google.com",
                 "releaseYear" => 2016,
             ],
-        ]
+        ];
+
+        function filterByAuthor($books, $author)
+        {
+            $filteredBooks = [];
+            foreach ($books as $book) {
+                if ($book["author"] === $author) {
+                    $filteredBooks[] = $book;
+                }
+            }
+            return $filteredBooks;
+        }
     ?>
 
-    <?php foreach ($books as $book): ?>
+    <?php foreach (filterByAuthor($books, 'New name') as $book): ?>
         <ul>
             <li>
                 <a href="<?= $book['download_url']?>">
