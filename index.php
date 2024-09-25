@@ -8,18 +8,18 @@
     <title>Laracast - basic PHP</title>
 </head>
 <body>
+    <h1>Recommended Books</h1>
     <?php
-        $book = "Dark Matter";
-        $read = true
+        $books = [
+                'Book 1', 'Book 2', 'Book 3', 'Book 4', 'Book 5', 'Book 6', 'Book 7',
+        ];
     ?>
-    <h1>
-        <?php
-            if ($read) {
-                echo "You have read the book " . $book;
-            } else {
-                echo "You have not read the book " . $book;
-            }
-        ?>
-    </h1>
+
+    <?php foreach ($books as $book): ?>
+        <ul>
+            <li><?= $book?></li>
+        </ul>
+    <?php endforeach ?>;
+
 </body>
 </html>
