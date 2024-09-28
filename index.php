@@ -31,19 +31,22 @@
             ],
         ];
 
-        function filterByAuthor($books, $author)
+        function filter($items, $fn)
         {
-            $filteredBooks = [];
-            foreach ($books as $book) {
-                if ($book["author"] === $author) {
-                    $filteredBooks[] = $book;
+            $filteredItems = [];
+            foreach ($items as $item) {
+                if ($fn($item)) {
+                    $filteredItems[] = $item;
                 }
             }
-            return $filteredBooks;
+            return $filteredItems;
         }
+        $filteredBooks = filter($books, function ($book) {
+            return $book["releaseYear"] > 2010;
+        });
     ?>
 
-    <?php foreach (filterByAuthor($books, 'New name') as $book): ?>
+    <?php foreach ($filteredBooks as $book): ?>
         <ul>
             <li>
                 <a href="<?= $book['download_url']?>">
