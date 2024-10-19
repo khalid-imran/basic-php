@@ -9,3 +9,8 @@ function dd($value) {
     echo "</pre>";
     die();
 }
+
+function abort($statusCode = 404)
+{
+    require 'view/'.$statusCode.'.view.html';
+}
