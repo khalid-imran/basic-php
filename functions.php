@@ -10,7 +10,11 @@ function dd($value) {
     die();
 }
 
-function abort($statusCode = 404)
-{
-    require 'view/'.$statusCode.'.view.html';
+function abort($statusCode = 404) {
+    require 'view/'.$statusCode.'.view.php';
+}
+function authorized($condition, $statusCode = 403) {
+    if (!$condition) {
+        abort($statusCode);
+    }
 }
