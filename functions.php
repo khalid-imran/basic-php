@@ -11,7 +11,7 @@ function dd($value) {
 }
 
 function abort($statusCode = 404) {
-    require 'view/'.$statusCode.'.view.php';
+    require 'views/'.$statusCode.'.views.php';
 }
 function authorized($condition, $statusCode = 403) {
     if (!$condition) {

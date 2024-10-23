@@ -5,4 +5,4 @@ $note = $db->query('SELECT * FROM notes WHERE id = :id', ['id' => $_GET['id']])-
 $currentUserId = 1;
 authorized($note['user_id'] === $currentUserId);
 $heading = $note['title'];
-require "view/note.view.php";
+require "views/notes/show.view.php";
