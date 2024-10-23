@@ -1,15 +1,9 @@
 <?php
-$url = parse_url($_SERVER["REQUEST_URI"])["path"];
-$routes = [
+return [
     '/' => 'controllers/index.php',
     '/notes' => 'controllers/notes.php',
     '/note' => 'controllers/note.php',
+    '/notes/create' => 'controllers/notes-create.php',
     '/about' => 'controllers/about.php',
     '/contact' => 'controllers/contact.php',
 ];
-
-if  (array_key_exists($url, $routes)) {
-    require $routes[$url];
-} else {
-    abort();
-}
