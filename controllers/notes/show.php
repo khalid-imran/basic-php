@@ -1,4 +1,5 @@
 <?php
+use Core\Database;
 $db = new Database($config['database']);
 $note = $db->query('SELECT * FROM notes WHERE id = :id', ['id' => $_GET['id']])->findOrFail();
 $currentUserId = 1;

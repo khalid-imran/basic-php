@@ -1,4 +1,5 @@
 <?php
+use Core\Database;
 require base_path('validator.php');
 $db = new Database($config['database']);
 $errors = [];
