@@ -1,6 +1,6 @@
-<?php require "views/partials/header.php"; ?>
-<?php require "views/partials/nav.php"; ?>
-<?php require "views/partials/banner.php"; ?>
+<?php require base_path('views/partials/header.php'); ?>
+<?php require base_path('views/partials/nav.php'); ?>
+<?php require base_path('views/partials/banner.php'); ?>
 
 <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@
                         <div class="sm:col-span-full">
                             <label for="body" class="block text-sm font-medium leading-6 text-gray-900">Body</label>
                             <div class="mt-2">
-                                <textarea id="body" name="body"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" name="" id="" cols="30" rows="10">
+                                <textarea id="body" name="body"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" cols="30" rows="10">
                                     <?= $_POST['body'] ?? '' ?>
                                 </textarea>
                             </div>
@@ -41,4 +41,4 @@
 
     </div>
 </main>
-<?php require "views/partials/footer.php"; ?>
+<?php require base_path('views/partials/footer.php'); ?>
